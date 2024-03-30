@@ -19,6 +19,7 @@ int eq_reduce_light(int x, int Dmax){
 int main(int argc, char const *argv[])
 {
     Image worm_hole_img = imreadTIF("../src/WormHole_2H.tif");
+    imwrite(worm_hole_img, "../out/WormHole_2H.pgm");
     worm_hole_img = poperation(worm_hole_img, eq_reduce_light);
     imwrite(worm_hole_img, "../out/1_WormHole_2H_no_reflection.pgm");
 
